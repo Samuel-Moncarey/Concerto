@@ -16,7 +16,11 @@
         "symfony/event-dispatcher": "~2.3,<3.0",
         "symfony/http-foundation": "~2.3,<3.0",
         "symfony/http-kernel": "~2.3,<3.0",
-        "symfony/routing": "~2.3,<3.0"
+        "symfony/routing": "~2.3,<3.0",
+        "twig/twig": ">=1.8.0,<2.0-dev",
+        "symfony/twig-bridge": "~2.3,<3.0",
+        "doctrine/dbal": "~2.2",
+        "swiftmailer/swiftmailer": "5.*"
     },
     "require-dev": {
         "symfony/security": "~2.3,<3.0",
@@ -33,11 +37,7 @@
         "symfony/process": "~2.3,<3.0",
         "symfony/serializer": "~2.3,<3.0",
         "symfony/translation": "~2.3,<3.0",
-        "symfony/twig-bridge": "~2.3,<3.0",
         "symfony/validator": "~2.3,<3.0",
-        "twig/twig": ">=1.8.0,<2.0-dev",
-        "doctrine/dbal": "~2.2",
-        "swiftmailer/swiftmailer": "5.*",
         "monolog/monolog": "~1.4,>=1.4.1"
     },
     "suggest": {
