@@ -1,6 +1,6 @@
 {
     "minimum-stability": "dev",
-    "name": "concerto/concerto",
+    "name": "concertophp/concerto",
     "description": "PHP lightweight-framework based on the Symfony2 Components",
     "homepage": "http://silex.sensiolabs.org",
     "license": "MIT",
