@@ -1,18 +1,13 @@
 {
     "minimum-stability": "dev",
-    "name": "silex/silex",
-    "description": "The PHP micro-framework based on the Symfony2 Components",
-    "keywords": ["microframework"],
+    "name": "concerto/concerto",
+    "description": "PHP lightweight-framework based on the Symfony2 Components",
     "homepage": "http://silex.sensiolabs.org",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fabien Potencier",
-            "email": "fabien@symfony.com"
-        },
-        {
-            "name": "Igor Wiedler",
-            "email": "igor@wiedler.ch"
+            "name": "Samuel Moncarey",
+            "email": "samuel.moncarey@live.com"
         }
     ],
     "require": {
@@ -52,10 +47,10 @@
         "symfony/form": "~2.3"
     },
     "autoload": {
-        "psr-4": { "Silex\\": "src/Silex" }
+        "psr-4": { "Concerto\\": "src/Concerto" }
     },
     "autoload-dev" : {
-        "psr-4": { "Silex\\Tests\\" : "tests/Silex/Tests" }
+        "psr-4": { "Concerto\\Tests\\" : "tests/Concerto/Tests" }
     },
     "extra": {
         "branch-alias": {
