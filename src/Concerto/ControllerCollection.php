@@ -72,13 +72,13 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function match($pattern, $to = null)
     {
         $route = clone $this->defaultRoute;
         $route->setPath($pattern);
-        $this->controllers[] = $controller = new Controller($route);
+        $this->controllers[] = $controller = new RouteController($route);
         $route->setDefault('_controller', null === $to ? $this->defaultController : $to);
 
         return $controller;
@@ -90,7 +90,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function get($pattern, $to = null)
     {
@@ -103,7 +103,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function post($pattern, $to = null)
     {
@@ -116,7 +116,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function put($pattern, $to = null)
     {
@@ -129,7 +129,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function delete($pattern, $to = null)
     {
@@ -142,7 +142,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function options($pattern, $to = null)
     {
@@ -155,7 +155,7 @@ class ControllerCollection
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function patch($pattern, $to = null)
     {
@@ -171,7 +171,7 @@ class ControllerCollection
         call_user_func_array(array($this->defaultRoute, $method), $arguments);
 
         foreach ($this->controllers as $controller) {
-            if ($controller instanceof Controller) {
+            if ($controller instanceof RouteController) {
                 call_user_func_array(array($controller, $method), $arguments);
             }
         }
@@ -191,7 +191,7 @@ class ControllerCollection
         $routes = new RouteCollection();
 
         foreach ($this->controllers as $controller) {
-            if ($controller instanceof Controller) {
+            if ($controller instanceof RouteController) {
                 if (!$name = $controller->getRouteName()) {
                     $name = $controller->generateRouteName($prefix);
                     while ($routes->get($name)) {

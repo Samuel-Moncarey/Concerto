@@ -199,7 +199,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function match($pattern, $to = null)
     {
@@ -212,7 +212,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function get($pattern, $to = null)
     {
@@ -225,7 +225,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function post($pattern, $to = null)
     {
@@ -238,7 +238,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function put($pattern, $to = null)
     {
@@ -251,7 +251,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function delete($pattern, $to = null)
     {
@@ -264,7 +264,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function options($pattern, $to = null)
     {
@@ -277,7 +277,7 @@ class Application extends \Pimple implements HttpKernelInterface, TerminableInte
      * @param string $pattern Matched route pattern
      * @param mixed  $to      Callback that returns the response when matched
      *
-     * @return Controller
+     * @return RouteController
      */
     public function patch($pattern, $to = null)
     {
