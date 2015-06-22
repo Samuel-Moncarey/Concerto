@@ -27,7 +27,7 @@ use Symfony\Component\HttpFoundation\Request;
  * @method ControllerCollection assert(string $variable, string $regexp)
  * @method ControllerCollection value(string $variable, mixed $default)
  * @method ControllerCollection convert(string $variable, mixed $callback)
- * @method ControllerCollection method(string $method)
+ * @method ControllerCollection methods(array $methods)
  * @method ControllerCollection requireHttp()
  * @method ControllerCollection requireHttps()
  * @method ControllerCollection before(mixed $callback)

@@ -29,9 +29,16 @@ class Config {
         $envConfig = file_get_contents("$config_dir/$env.json");
         self::$configData->env = json_decode($envConfig);
         
+        $routingConfig = file_get_contents("$config_dir/routing.json");
+        self::$configData->routes = json_decode($routingConfig, true);
+        
     }
     
     public static function get($key) {
+        
+        if ($key == 'routes') {
+            return self::$configData->routes;
+        }
         
         if (isset(self::$configData->main->{$key})) {
             return self::$configData->main->{$key};

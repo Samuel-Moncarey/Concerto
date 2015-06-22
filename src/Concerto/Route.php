@@ -109,9 +109,9 @@ class Route extends BaseRoute
      *
      * @return Route $this The current Route instance
      */
-    public function method($method)
+    public function methods($methods)
     {
-        $this->setMethods(explode('|', $method));
+        $this->setMethods($methods);
 
         return $this;
     }
